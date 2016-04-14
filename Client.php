@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Nicolaslopezj\Searchable\SearchableTrait;
 class Client extends Model
 {
-    public $fillable = ['name','firstname','cv','sexe','daten','tel','add','sit','email','permi','armee','auto','info','dipo','exp','word','photoshop','powerpoint','autre','outlook','autocad','category_id','wilaya','cat1','cat2','cat3','histori'];
+    public $fillable = ['name','firstname','cv','sexe','daten','tel','add','sit','email','permi','armee','auto','info','dipo','exp','word','photoshop','powerpoint','autre','outlook','autocad','category_id','wilaya','cat1','cat2','cat3','histori',"spe"];
 
     public function Categories()
 	{

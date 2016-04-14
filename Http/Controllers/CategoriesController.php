@@ -37,7 +37,7 @@ class CategoriesController extends Controller
     }
     public function edit($id){
         $cat = Category::findOrFail($id);
-        return view('Categories.create',compact('cat'));
+        return view('Categories.edit',compact('cat'));
     }
 
     public function update(Request $request){

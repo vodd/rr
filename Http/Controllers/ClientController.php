@@ -27,7 +27,7 @@ class ClientController extends Controller
     public function index()
     {
 
-    $client = Client::all();
+    $client = Client::orderBy('created_at','desc')->get();
     // returns a view and passes the view the list of articles and the original query.
     return view('client.index',compact('client'));
 
@@ -152,9 +152,9 @@ class ClientController extends Controller
         $input = $request->all();
         $client->update($input);
 
-        Session::flash('flash_message', 'Task successfully added!');
+        Session::flash('flash_message', 'Candidat successfully added!');
 
-        return redirect()->back();
+        return Redirect::action('ClientController@index');
 
     }
 

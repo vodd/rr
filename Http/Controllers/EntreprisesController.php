@@ -113,7 +113,8 @@ class EntreprisesController extends Controller
 
     public function blyat(){
         $client = Client::paginate(10);
-        //$clients = Entreprise::get('all')->client;
+        $ent = Entreprise::all();
+        //$clients = $ent->Client-get();
         $tasks = Task::orderBy('created_at', 'desc')->get();
         return view('Entreprises.blyat',compact('client','tasks'));
     }
